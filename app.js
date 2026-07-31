@@ -17,6 +17,7 @@ const translations = {
     navPillars:     "Программа",
     navCoach:       "О тренере",
     navBooking:     "Запись",
+    navInstagram:   "Медиа",
 
     btnHeaderBook:  "Записаться",
     heroSubBadge:   "ПРИВАТНЫЕ ТРЕНИРОВКИ • ТОЛЬКО ПО ЗАЯВКАМ",
@@ -56,7 +57,7 @@ const translations = {
 
     coachTag:       "О ТРЕНЕРЕ",
     coachTitle:     '"СОВЕТСКАЯ ШКОЛА — ЭТО НЕ СТИЛЬ. ЭТО СИСТЕМА, КОТОРУЮ НЕЛЬЗЯ СКОПИРОВАТЬ ЗА МЕСЯЦ."',
-    coachBio:       "Тренер Расул воспитан на традициях советской боксёрской школы — той самой, что дала миру Бивола, Ломаченко и десятки олимпийских чемпионов. Его метод: строить боксёра через дисциплину гарда, образование джеба и терпение контрудара — а не через поиск нокаута.",
+    coachBio:       "Расул Такаев — тренер, воспитанный на традициях советской боксёрской школы. Та самая система, что дала миру Бивола, Ломаченко и десятки олимпийских чемпионов. Его метод: строить боксёра через дисциплину гарда, образование джеба и терпение контрудара — а не через поиск нокаута.",
     coachBadgeTitle: "ГЛАВНЫЙ ТРЕНЕР",
     coachBadgeSub:  "Советская боксёрская школа",
     cp1Title: "Строго 1-на-1",
@@ -113,6 +114,14 @@ const translations = {
 
     fTitleNav:     "Навигация",
     fTitleContact: "Контакты",
+    instaTag:      "СЛЕДИТЕ ЗА ТРЕНИРОВКАМИ",
+    instaTitle:    "@RASUL.SPORT27",
+    instaDesc:     "46,000+ подписчиков следят за тренировочным процессом. Реальные тренировки, спарринги и подготовка бойцов.",
+    instaWatch:    "Смотреть",
+    instaReel1:    "Спарринг & Работа на лапах",
+    instaReel2:    "Постановка защиты",
+    instaReel3:    "Работа ног & Углы",
+    instaFollow:   "Подписаться — 46K подписчиков",
   },
 
   en: {
@@ -124,6 +133,7 @@ const translations = {
     navPillars:     "Program",
     navCoach:       "Coach",
     navBooking:     "Book",
+    navInstagram:   "Media",
 
     btnHeaderBook:  "Book Session",
     heroSubBadge:   "PRIVATE TRAINING • BY APPLICATION ONLY",
@@ -163,7 +173,7 @@ const translations = {
 
     coachTag:       "MEET THE COACH",
     coachTitle:     '"SOVIET BOXING IS NOT A STYLE. IT IS A SYSTEM YOU CANNOT FAKE."',
-    coachBio:       "Coach Rasul was forged in the Soviet boxing tradition — the same school that produced Bivol, Lomachenko, and generations of Olympic gold medallists. His method does not chase knockouts. It builds fighters who are technically impossible to hit cleanly, and surgically precise when they choose to fire.",
+    coachBio:       "Rasul Takaev was forged in the Soviet boxing tradition — the same school that produced Bivol, Lomachenko, and generations of Olympic gold medallists. His method does not chase knockouts. It builds fighters who are technically impossible to hit cleanly, and surgically precise when they choose to fire.",
     coachBadgeTitle: "HEAD COACH",
     coachBadgeSub:  "Soviet Boxing School",
     cp1Title: "Strict 1-on-1 Soviet Methodology",
@@ -220,6 +230,14 @@ const translations = {
 
     fTitleNav:     "Navigation",
     fTitleContact: "Contact",
+    instaTag:      "FOLLOW THE TRAINING",
+    instaTitle:    "@RASUL.SPORT27",
+    instaDesc:     "46,000+ followers watching real training footage. Sparring, pad work, and fighter preparation.",
+    instaWatch:    "Watch",
+    instaReel1:    "Sparring & Pad Work",
+    instaReel2:    "Defence Drills",
+    instaReel3:    "Footwork & Angles",
+    instaFollow:   "Follow — 46K Followers",
   }
 };
 
