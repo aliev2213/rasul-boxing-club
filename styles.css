@@ -1,28 +1,32 @@
 /* ==========================================================================
    RASUL BOXING CLUB - HIGH-CONVERTING DESIGN SYSTEM & STYLESHEET
-   Aesthetic: Deep Charcoal Dark Mode, High-Contrast Crimson Red, Stark White
+   Aesthetic: Luxury Matte Dark Slate, Brushed Metallic Gold, Pure White
    Language: Russian First (RU) with 1-Click English (EN) Switcher
    ========================================================================== */
 
 :root {
-  /* Color Tokens */
-  --bg-primary: #111111;
-  --bg-secondary: #18181B;
-  --bg-card: #1C1C1E;
-  --bg-card-hover: #26262A;
-  --bg-input: #141416;
+  /* Color Tokens - Brushed Metallic Gold & Dark Slate */
+  --bg-primary: #0D0E11;
+  --bg-secondary: #141519;
+  --bg-card: #1B1C22;
+  --bg-card-hover: #24262E;
+  --bg-input: #111216;
   
-  --accent-red: #D32F2F;
-  --accent-red-hover: #B71C1C;
-  --accent-red-glow: rgba(211, 47, 47, 0.4);
-  --accent-red-subtle: rgba(211, 47, 47, 0.12);
+  --accent-red: #CBA135;
+  --accent-gold: #CBA135;
+  --accent-gold-light: #F3E5AB;
+  --accent-gold-dark: #A47E1F;
+  --accent-gold-gradient: linear-gradient(135deg, #F3E5AB 0%, #CBA135 50%, #99741A 100%);
+  --accent-red-hover: #B58E2A;
+  --accent-red-glow: rgba(203, 161, 53, 0.4);
+  --accent-red-subtle: rgba(203, 161, 53, 0.12);
 
   --text-primary: #FFFFFF;
-  --text-secondary: #A1A1AA;
-  --text-muted: #71717A;
+  --text-secondary: #B0B3BD;
+  --text-muted: #737785;
 
-  --border-dark: #27272A;
-  --border-red: rgba(211, 47, 47, 0.3);
+  --border-dark: #2A2C34;
+  --border-red: rgba(203, 161, 53, 0.35);
 
   /* Typography */
   --font-heading: 'Bebas Neue', 'Oswald', sans-serif;
@@ -38,14 +42,35 @@
   --radius-full: 9999px;
 
   /* Shadows & Glassmorphism */
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 25px rgba(211, 47, 47, 0.35);
-  --glass-bg: rgba(28, 28, 30, 0.9);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(203, 161, 53, 0.35);
+  --glass-bg: rgba(27, 28, 34, 0.92);
+  --glass-border: rgba(203, 161, 53, 0.15);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+.mobile-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+}
+
+.footer-logo-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
 }
 
 /* --- Base Reset --- */
@@ -172,15 +197,16 @@ button, input, select, textarea {
 }
 
 .btn-primary {
-  background-color: var(--accent-red);
-  color: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(211, 47, 47, 0.4);
+  background: var(--accent-gold-gradient);
+  color: #0D0E11;
+  box-shadow: 0 4px 20px rgba(203, 161, 53, 0.4);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-red-hover);
+  background: linear-gradient(135deg, #FFF0BD 0%, #D4AF37 50%, #AA7C11 100%);
+  color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(211, 47, 47, 0.6);
+  box-shadow: 0 8px 30px rgba(203, 161, 53, 0.65);
 }
 
 .btn-secondary {
@@ -204,9 +230,9 @@ button, input, select, textarea {
 }
 
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.6); }
-  70% { box-shadow: 0 0 0 15px rgba(211, 47, 47, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(203, 161, 53, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(203, 161, 53, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(203, 161, 53, 0); }
 }
 
 /* --- Top Status Bar --- */
@@ -461,7 +487,7 @@ button, input, select, textarea {
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 60% 40%, rgba(211, 47, 47, 0.15) 0%, rgba(17, 17, 17, 0.94) 65%, #111111 100%);
+  background: radial-gradient(circle at 60% 40%, rgba(203, 161, 53, 0.18) 0%, rgba(13, 14, 17, 0.95) 65%, #0D0E11 100%);
   z-index: 2;
 }
 
@@ -602,7 +628,7 @@ button, input, select, textarea {
 
 .featured-card {
   border-color: var(--border-red);
-  background: linear-gradient(180deg, rgba(211, 47, 47, 0.08) 0%, var(--bg-card) 40%);
+  background: linear-gradient(180deg, rgba(203, 161, 53, 0.08) 0%, var(--bg-card) 40%);
 }
 
 .featured-badge {
@@ -860,7 +886,7 @@ button, input, select, textarea {
 }
 
 .urgency-callout {
-  background: rgba(211, 47, 47, 0.1);
+  background: rgba(203, 161, 53, 0.1);
   border: 1px solid var(--border-red);
   border-radius: var(--radius-md);
   padding: 1.25rem;
@@ -951,7 +977,7 @@ button, input, select, textarea {
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--accent-red);
-  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
+  box-shadow: 0 0 0 3px rgba(203, 161, 53, 0.25);
 }
 
 .form-input.invalid, .form-select.invalid, .form-textarea.invalid {
@@ -1301,8 +1327,8 @@ button, input, select, textarea {
 }
 
 .btn-insta:hover {
-  border-color: #e1306c;
-  box-shadow: 0 0 20px rgba(225, 48, 108, 0.3);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 20px rgba(203, 161, 53, 0.4);
 }
 
 /* Floating Instagram Button */
@@ -1313,13 +1339,13 @@ button, input, select, textarea {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  color: #fff;
+  background: var(--accent-gold-gradient);
+  color: #0D0E11;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-  box-shadow: 0 4px 20px rgba(225, 48, 108, 0.5);
+  box-shadow: 0 4px 20px rgba(203, 161, 53, 0.5);
   z-index: 1500;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   animation: floatBounce 3s ease-in-out infinite;
@@ -1327,7 +1353,7 @@ button, input, select, textarea {
 
 .floating-insta-btn:hover {
   transform: scale(1.12);
-  box-shadow: 0 8px 30px rgba(225, 48, 108, 0.7);
+  box-shadow: 0 8px 30px rgba(203, 161, 53, 0.8);
 }
 
 @keyframes floatBounce {
