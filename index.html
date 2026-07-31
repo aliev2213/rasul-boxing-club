@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rasul Boxing Club | Private Elite 1-on-1 Fight Development</title>
-  <meta name="description" content="Tailored technical coaching, ring mechanics, and fight preparation for athletes aiming for the professional ranks. Book your private 1-on-1 assessment session with Coach Rasul.">
+  <title>Rasul Boxing Club | Элитная 1-на-1 Подготовка Бойцов</title>
+  <meta name="description" content="Персональная постановка техники, механика ринга и подготовка спортсменов к профессиональному рингу. Запишитесь на приватный 1-на-1 аудит с Тренером Расулом.">
   <meta name="theme-color" content="#111111">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="Rasul Boxing Club | Private Elite 1-on-1 Boxing Coach">
-  <meta property="og:description" content="Tailored technical coaching, ring mechanics, and fight preparation for athletes aiming for the professional ranks.">
+  <meta property="og:title" content="Rasul Boxing Club | Элитный Персональный Тренер по Боксу">
+  <meta property="og:description" content="Персональная постановка техники, механика ринга и подготовка спортсменов.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
@@ -23,14 +23,16 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-lang="ru">
 
-  <!-- Top Notification Bar -->
+  <!-- Top Status Banner -->
   <div class="top-banner" id="topBanner">
     <div class="container banner-content">
-      <span class="badge-status pulse"><i class="fa-solid fa-fire"></i> LIMITED SLOTS</span>
-      <span class="banner-text">Only <strong>3 Private Assessment Slots</strong> Remaining for <span id="currentMonthYear">August 2026</span></span>
-      <a href="#booking" class="banner-link">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+      <span class="badge-status pulse"><i class="fa-solid fa-fire"></i> <span data-key="bannerBadge">ОГРАНИЧЕННЫЙ НАБОР</span></span>
+      <span class="banner-text">
+        <span data-key="bannerText">Осталось всего <strong>3 места</strong> на персональный аудит в</span> <span id="currentMonthYear">Августе 2026</span>
+      </span>
+      <a href="#booking" class="banner-link"><span data-key="bannerApply">Подать заявку</span> <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 
@@ -42,19 +44,26 @@
         <div class="logo-text">RASUL <span>BOXING</span></div>
       </a>
 
+      <!-- Minimal, Clean Navigation -->
       <nav class="nav-menu" id="navMenu">
-        <a href="#hero" class="nav-link active">Home</a>
-        <a href="#pillars" class="nav-link">Training Pillars</a>
-        <a href="#qualifier" class="nav-link">Self-Assessment</a>
-        <a href="#coach" class="nav-link">Coach Rasul</a>
-        <a href="#ring-iq" class="nav-link">Ring IQ Lab</a>
-        <a href="#testimonials" class="nav-link">Fighter Stories</a>
+        <a href="#hero" class="nav-link active" data-key="navHome">Главная</a>
+        <a href="#pillars" class="nav-link" data-key="navPillars">Программа</a>
+        <a href="#coach" class="nav-link" data-key="navCoach">О тренере</a>
+        <a href="#booking" class="nav-link" data-key="navBooking">Запись</a>
       </nav>
 
-      <div class="header-cta-wrap">
+      <div class="header-right-group">
+        <!-- Language Switcher (RU / EN) -->
+        <div class="lang-switch-wrap">
+          <button class="lang-btn active" id="langRuBtn" data-lang-target="ru">RU</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="langEnBtn" data-lang-target="en">EN</button>
+        </div>
+
         <a href="#booking" class="btn btn-primary btn-header" id="headerCtaBtn">
-          <i class="fa-solid fa-calendar-check"></i> Book Session
+          <i class="fa-solid fa-calendar-check"></i> <span data-key="btnHeaderBook">Записаться</span>
         </a>
+
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -66,14 +75,18 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
     <div class="mobile-logo">RASUL <span>BOXING</span></div>
+
+    <!-- Mobile Language Switch -->
+    <div class="mobile-lang-switch">
+      <button class="lang-btn active" id="mLangRuBtn" data-lang-target="ru">РУССКИЙ</button>
+      <button class="lang-btn" id="mLangEnBtn" data-lang-target="en">ENGLISH</button>
+    </div>
+
     <div class="mobile-nav-links">
-      <a href="#hero" class="mobile-link">Home</a>
-      <a href="#pillars" class="mobile-link">Training Pillars</a>
-      <a href="#qualifier" class="mobile-link">Self-Assessment Quiz</a>
-      <a href="#coach" class="mobile-link">Coach Rasul</a>
-      <a href="#ring-iq" class="mobile-link">Ring IQ Lab</a>
-      <a href="#testimonials" class="mobile-link">Fighter Stories</a>
-      <a href="#booking" class="mobile-link highlight">Book Private Session</a>
+      <a href="#hero" class="mobile-link" data-key="navHome">Главная</a>
+      <a href="#pillars" class="mobile-link" data-key="navPillars">Программа</a>
+      <a href="#coach" class="mobile-link" data-key="navCoach">О тренере</a>
+      <a href="#booking" class="mobile-link highlight" data-key="btnHeaderBook">Записаться на аудит</a>
     </div>
   </div>
 
@@ -86,52 +99,48 @@
       <div class="hero-content">
         <div class="sub-badge" id="subBadge">
           <span class="badge-dot"></span>
-          PRIVATE TRAINING • BY APPLICATION ONLY
+          <span data-key="heroSubBadge">ПРИВАТНЫЕ ТРЕНИРОВКИ • ТОЛЬКО ПО ЗАЯВКАМ</span>
         </div>
 
         <h1 class="hero-title" id="heroTitle">
-          ELITE 1-ON-1 <br>
-          <span class="highlight-text">FIGHT DEVELOPMENT.</span>
+          <span data-key="heroTitleLine1">ЭЛИТНАЯ 1-НА-1</span> <br>
+          <span class="highlight-text" data-key="heroTitleLine2">ПОДГОТОВКА БОЙЦОВ.</span>
         </h1>
 
-        <p class="hero-subtitle" id="heroSubtitle">
-          Tailored technical coaching, ring mechanics, and fight preparation for athletes aiming for the professional ranks.
+        <p class="hero-subtitle" id="heroSubtitle" data-key="heroSubtitle">
+          Персональная постановка техники, механика ринга и подготовка спортсменов для выхода на профессиональный уровень.
         </p>
 
         <div class="hero-cta-group">
           <a href="#booking" class="btn btn-primary btn-hero pulse-glow" id="heroPrimaryCta">
-            <span>Book Your Assessment Session</span>
+            <span data-key="heroCtaPrimary">Записаться на аудит</span>
             <i class="fa-solid fa-shield-halved"></i>
-          </a>
-          <a href="#qualifier" class="btn btn-secondary btn-hero" id="heroSecondaryCta">
-            <span>Check If You Qualify</span>
-            <i class="fa-solid fa-list-check"></i>
           </a>
         </div>
 
         <div class="hero-guarantee">
           <i class="fa-solid fa-lock"></i>
-          <span>Direct 1-on-1 access to Head Coach Rasul. Zero group classes. 100% focused on your fight record.</span>
+          <span data-key="heroGuarantee">Прямой 1-на-1 доступ к Главного Тренеру Расулу. Без фитнес-групп. 100% фокус на ваш результат.</span>
         </div>
       </div>
 
       <!-- Hero Key Metrics Bar -->
       <div class="hero-stats-grid">
         <div class="stat-card">
-          <div class="stat-number" data-target="12">12+</div>
-          <div class="stat-label">Title Belt Winners Trained</div>
+          <div class="stat-number">12+</div>
+          <div class="stat-label" data-key="stat1Label">Чемпионов и обладателей поясов</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="98">98.4%</div>
-          <div class="stat-label">Fight Win & KO Ratio</div>
+          <div class="stat-number">98.4%</div>
+          <div class="stat-label" data-key="stat2Label">Побед и нокаутов</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">1-ON-1</div>
-          <div class="stat-label">Dedicated Mentorship</div>
+          <div class="stat-number">1-НА-1</div>
+          <div class="stat-label" data-key="stat3Label">Индивидуальный разбор</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number">4 / MO</div>
-          <div class="stat-label">Max New Athletes Accepted</div>
+          <div class="stat-number">4 / МЕС</div>
+          <div class="stat-label" data-key="stat4Label">Макс. Новых атлетов</div>
         </div>
       </div>
     </div>
@@ -141,216 +150,58 @@
   <section class="section pillars-section" id="pillars">
     <div class="container">
       <div class="section-header text-center">
-        <div class="section-tag">CORE METHODOLOGY</div>
-        <h2 class="section-title">THE 3 PILLARS OF PRO DEVELOPMENT</h2>
-        <p class="section-desc">Our proprietary 1-on-1 system bridges the gap between amateur athleticism and championship fight mechanics.</p>
+        <div class="section-tag" data-key="pillarsTag">МЕТОДОЛОГИЯ РАСУЛА</div>
+        <h2 class="section-title" data-key="pillarsTitle">3 СТОЛПА ПРОФЕССИОНАЛЬНОЙ ПОДГОТОВКИ</h2>
+        <p class="section-desc" data-key="pillarsDesc">Авторская система персональных тренировок для перехода от любительского бокса к чемпионской механике.</p>
       </div>
 
       <div class="pillars-grid">
         <!-- Pillar Card 1 -->
-        <div class="pillar-card" id="pillar1">
+        <div class="pillar-card">
           <div class="pillar-number">01</div>
           <div class="pillar-icon"><i class="fa-solid fa-crosshairs"></i></div>
-          <h3 class="pillar-title">Technical Mastery</h3>
-          <p class="pillar-text">
-            Precision footwork, head movement, counter-punching, and biomechanical punch efficiency. We reconstruct every angle of your guard to eliminate mechanical flaws.
+          <h3 class="pillar-title" data-key="pillar1Title">Техническое мастерство</h3>
+          <p class="pillar-text" data-key="pillar1Text">
+            Точная работа ног, движение головы, контратаки и биомеханика удара. Полная перестройка стойки и защиты для исключения ошибок.
           </p>
 
           <div class="pillar-features">
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Biomechanical leverage optimization</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Micro-slip & roll counter geometry</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Footwork pivot and angle creation</div>
-          </div>
-
-          <!-- Dynamic Mechanics Interactive Widget -->
-          <div class="pillar-interactive">
-            <div class="interactive-label">Interactive Strike Bio-Leverage:</div>
-            <div class="punch-selector">
-              <button class="punch-btn active" data-punch="jab">Jab</button>
-              <button class="punch-btn" data-punch="cross">Cross</button>
-              <button class="punch-btn" data-punch="hook">Hook</button>
-              <button class="punch-btn" data-punch="uppercut">Upper</button>
-            </div>
-            <div class="punch-display" id="punchDisplay">
-              <span class="punch-stat-title">Jab Mechanics:</span>
-              <span class="punch-stat-desc">Lead foot torque, shoulder snap, 100% reach extension without over-committing off-balance.</span>
-            </div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p1f1">Оптимизация биомеханики удара</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p1f2">Уклоны, нырки и контратаки</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p1f3">Работа ног и углы атаки</span></div>
           </div>
         </div>
 
         <!-- Pillar Card 2 -->
-        <div class="pillar-card featured-card" id="pillar2">
-          <div class="featured-badge">MOST CRITICAL</div>
+        <div class="pillar-card featured-card">
+          <div class="featured-badge" data-key="badgeCritical">КЛЮЧЕВОЙ ЭЛЕМЕНТ</div>
           <div class="pillar-number">02</div>
           <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3 class="pillar-title">Ring IQ & Strategy</h3>
-          <p class="pillar-text">
-            Sparring breakdown, distance management, and fighting styles customization. Learn to read opponent ocular cues and dictate ring generalship at will.
+          <h3 class="pillar-title" data-key="pillar2Title">Бойцовский IQ и стратегия</h3>
+          <p class="pillar-text" data-key="pillar2Text">
+            Разбор спаррингов, управление дистанцией и тактика под соперника. Обучение чтению ритма оппонента и контролю ринга.
           </p>
 
           <div class="pillar-features">
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Opponent rhythm breakdown & feints</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Southpaw / Orthodox tactical traps</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Ring boundary manipulation & cornering</div>
-          </div>
-
-          <!-- Dynamic Strategy Interactive Widget -->
-          <div class="pillar-interactive">
-            <div class="interactive-label">Select Tactical Style Focus:</div>
-            <div class="style-selector">
-              <button class="style-btn active" data-style="counter">Counter-Puncher</button>
-              <button class="style-btn" data-style="pressure">Inside Presser</button>
-              <button class="style-btn" data-style="outboxer">Outside Master</button>
-            </div>
-            <div class="style-display" id="styleDisplay">
-              <span class="punch-stat-title">Counter-Puncher Blueprint:</span>
-              <span class="punch-stat-desc">Baiting with high guard, pull-counter timing, shoulder roll defense, punishing off-balance missed jabs.</span>
-            </div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p2f1">Анализ финтов и ритма соперника</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p2f2">Тактические ловушки (Левша / Левша)</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p2f3">Контроль углов ринга</span></div>
           </div>
         </div>
 
         <!-- Pillar Card 3 -->
-        <div class="pillar-card" id="pillar3">
+        <div class="pillar-card">
           <div class="pillar-number">03</div>
           <div class="pillar-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-          <h3 class="pillar-title">Pro Conditioning</h3>
-          <p class="pillar-text">
-            Fight-specific energy systems, explosive power, and fight-night readiness. Engineered for 10–12 round output without metabolic degradation.
+          <h3 class="pillar-title" data-key="pillar3Title">Про-кондиция</h3>
+          <p class="pillar-text" data-key="pillar3Text">
+            Специфическая выносливость, взрывная сила и готовность к бою. Подготовка тела к максимальной нагрузке в 10–12 раундах.
           </p>
 
           <div class="pillar-features">
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Anaerobic lactic threshold conditioning</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Rotational explosive kinetic chain</div>
-            <div class="feature-item"><i class="fa-solid fa-check"></i> Weight cut optimization & fight-day recovery</div>
-          </div>
-
-          <!-- Dynamic Conditioning Meter Widget -->
-          <div class="pillar-interactive">
-            <div class="interactive-label">Energy System Output Ratio:</div>
-            <div class="stamina-meter">
-              <div class="meter-bar">
-                <div class="meter-fill" style="width: 94%;"></div>
-              </div>
-              <div class="meter-labels">
-                <span>Rounds 1-4: 100% Explosive</span>
-                <span>Rounds 9-12: 94% Threshold</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Fighter Self-Assessment Quiz -->
-  <section class="section qualifier-section" id="qualifier">
-    <div class="container">
-      <div class="qualifier-box">
-        <div class="qualifier-header text-center">
-          <span class="sub-badge"><i class="fa-solid fa-sliders"></i> INTERACTIVE QUALIFIER</span>
-          <h2 class="section-title">ARE YOU READY FOR 1-ON-1 PRO ASSESSMENT?</h2>
-          <p class="section-desc">Coach Rasul accepts only dedicated contenders. Answer 3 quick questions to check your program compatibility.</p>
-        </div>
-
-        <div class="quiz-container" id="quizContainer">
-          <!-- Step 1 -->
-          <div class="quiz-step active" data-step="1">
-            <div class="quiz-step-indicator">Step 1 of 3: Experience Baseline</div>
-            <h3 class="quiz-question">What is your current fight background?</h3>
-            <div class="quiz-options">
-              <button class="quiz-opt" data-value="Beginner Contender">
-                <div class="opt-icon"><i class="fa-solid fa-user-ninja"></i></div>
-                <div class="opt-info">
-                  <strong>Beginner Contender</strong>
-                  <span>0-1 year experience, eager to build correct fundamentals</span>
-                </div>
-              </button>
-              <button class="quiz-opt" data-value="Amateur Fighter">
-                <div class="opt-icon"><i class="fa-solid fa-medal"></i></div>
-                <div class="opt-info">
-                  <strong>Amateur Fighter</strong>
-                  <span>Active amateur with fight experience preparing for tournaments</span>
-                </div>
-              </button>
-              <button class="quiz-opt" data-value="Active Pro">
-                <div class="opt-icon"><i class="fa-solid fa-trophy"></i></div>
-                <div class="opt-info">
-                  <strong>Active Pro / Prospect</strong>
-                  <span>Professional fighter or elite contender aiming for world rank</span>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="quiz-step" data-step="2">
-            <div class="quiz-step-indicator">Step 2 of 3: Commitment Level</div>
-            <h3 class="quiz-question">How many hours per week can you dedicate to 1-on-1 fight lab sessions?</h3>
-            <div class="quiz-options">
-              <button class="quiz-opt" data-value="3-5 Hours / Week">
-                <div class="opt-icon"><i class="fa-solid fa-clock"></i></div>
-                <div class="opt-info">
-                  <strong>3 - 5 Hours / Week</strong>
-                  <span>Private technical sessions & shadow sparring</span>
-                </div>
-              </button>
-              <button class="quiz-opt" data-value="6-10 Hours / Week">
-                <div class="opt-icon"><i class="fa-solid fa-fire-burner"></i></div>
-                <div class="opt-info">
-                  <strong>6 - 10 Hours / Week</strong>
-                  <span>Intense fight camp mode with video breakdown</span>
-                </div>
-              </button>
-              <button class="quiz-opt" data-value="Full-time Camp">
-                <div class="opt-icon"><i class="fa-solid fa-crown"></i></div>
-                <div class="opt-info">
-                  <strong>Full-time Camp Mode</strong>
-                  <span>Comprehensive pro camp & Sparring Generalship</span>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="quiz-step" data-step="3">
-            <div class="quiz-step-indicator">Step 3 of 3: Primary Goal</div>
-            <h3 class="quiz-question">What is your primary breakthrough objective?</h3>
-            <div class="quiz-options">
-              <button class="quiz-opt" data-value="Pro Debut / Title Belt">
-                <div class="opt-icon"><i class="fa-solid fa-award"></i></div>
-                <div class="opt-info">
-                  <strong>Pro Debut & Title Belt Prep</strong>
-                  <span>Preparing for undefeated entry into professional boxing</span>
-                </div>
-              </button>
-              <button class="quiz-opt" data-value="Fix Technical Flaws">
-                <div class="opt-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <div class="opt-info">
-                  <strong>Fix Technical Flaws & Defense</strong>
-                  <span>Eliminate getting caught with counters, improve head movement</span>
-                </div>
-              </button>
-              <button class="quiz-opt" data-value="Master Ring IQ">
-                <div class="opt-icon"><i class="fa-solid fa-chess-king"></i></div>
-                <div class="opt-info">
-                  <strong>Master Ring IQ & Strategy</strong>
-                  <span>Learn to out-think, bait, and dominate opponents tactically</span>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Quiz Result State -->
-          <div class="quiz-result" id="quizResult" style="display: none;">
-            <div class="result-badge"><i class="fa-solid fa-circle-check"></i> HIGH COMPATIBILITY CONFIRMED</div>
-            <h3 class="result-title">YOU QUALIFY FOR A PRIVATE ASSESSMENT</h3>
-            <p class="result-desc">Based on your answers, your goals align directly with Coach Rasul's 1-on-1 Fight Development Methodology.</p>
-            <div class="result-action">
-              <a href="#booking" class="btn btn-primary btn-lg" id="applyQuizDataBtn">
-                <span>Fast-Track Your Application</span>
-                <i class="fa-solid fa-arrow-down"></i>
-              </a>
-            </div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p3f1">Анаэробная выносливость</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p3f2">Взрывная кинетическая цепь</span></div>
+            <div class="feature-item"><i class="fa-solid fa-check"></i> <span data-key="p3f3">Восстановление и сгонка веса</span></div>
           </div>
         </div>
       </div>
@@ -362,195 +213,44 @@
     <div class="container">
       <div class="coach-grid">
         <div class="coach-image-wrap">
-          <img src="assets/coach_rasul.png" alt="Coach Rasul - Head Boxing Coach" class="coach-img">
+          <img src="assets/coach_rasul.png" alt="Тренер Расул - Главный тренер" class="coach-img">
           <div class="coach-image-badge">
-            <span class="badge-title">HEAD COACH</span>
-            <span class="badge-name">RASUL</span>
-            <span class="badge-sub">Master Fight Tactician</span>
+            <span class="badge-title" data-key="coachBadgeTitle">ГЛАВНЫЙ ТРЕНЕР</span>
+            <span class="badge-name">РАСУЛ</span>
+            <span class="badge-sub" data-key="coachBadgeSub">Мастер бойцовской тактики</span>
           </div>
         </div>
 
         <div class="coach-content">
-          <div class="section-tag">MEET THE HEAD COACH</div>
-          <h2 class="section-title">"CHAMPIONS ARE NOT MADE BY CHANCE. THEY ARE BUILT IN ISOLATION."</h2>
+          <div class="section-tag" data-key="coachTag">О ТРЕНЕРЕ</div>
+          <h2 class="section-title" data-key="coachTitle">"ЧЕМПИОНАМИ НЕ СТАНОВЯТСЯ СЛУЧАЙНО. ИХ СТРОЯТ В ТИШИНЕ."</h2>
           
-          <p class="coach-bio">
-            Coach Rasul has spent over 15 years in elite fight development, coaching national champions, world title contenders, and top-tier amateur prospects. Unlike commercial boxing gyms that teach generic group cardio, Rasul Boxing Club operates as a private fight laboratory.
+          <p class="coach-bio" data-key="coachBio">
+            Более 15 лет в элитном боксе. Подготовка чемпионов страны, претендентов на мировые титулы и профессиональных спортсменов. В отличие от массовых фитнес-клубов, Rasul Boxing Club работает исключительно как приватная лаборатория бокса.
           </p>
 
           <div class="coach-pillars">
             <div class="c-pillar">
               <div class="c-icon"><i class="fa-solid fa-user-lock"></i></div>
               <div class="c-text">
-                <strong>Strict 1-on-1 Exclusivity</strong>
-                <span>No distractions. 100% of Coach Rasul's eyes are on your guard, balance, and kinetic transfer.</span>
+                <strong data-key="cp1Title">Строго 1-на-1</strong>
+                <span data-key="cp1Desc">100% внимания тренера на вашей технике, стойке и балансе.</span>
               </div>
             </div>
 
             <div class="c-pillar">
-              <div class="c-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="c-icon"><i class="fa-solid fa-video"></i></div>
               <div class="c-text">
-                <strong>Frame-By-Frame Video Analysis</strong>
-                <span>Every assessment session includes multi-angle high-speed footage breakdown of your footwork & strikes.</span>
-              </div>
-            </div>
-
-            <div class="c-pillar">
-              <div class="c-icon"><i class="fa-solid fa-shield-halved"></i></div>
-              <div class="c-text">
-                <strong>Complete Ring Generalship</strong>
-                <span>Learn how to manipulate ring geometry so opponents walk directly into your power hand.</span>
+                <strong data-key="cp2Title">Видео-анализ кадр за кадром</strong>
+                <span data-key="cp2Desc">Разбор работы ног и ударов на замедленном повторе.</span>
               </div>
             </div>
           </div>
 
           <div class="coach-quote-box">
             <i class="fa-solid fa-quote-left quote-icon"></i>
-            <p class="quote-text">"If you want to fight like everyone else, join a commercial gym. If you want to become un-touchable and devastatingly precise, step into my ring."</p>
-            <div class="quote-author">— Coach Rasul</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Ring IQ Lab Section -->
-  <section class="section ring-iq-section" id="ring-iq">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">FIGHT IQ ANALYSIS</div>
-        <h2 class="section-title">THE RASUL TACTICAL BREAKDOWN LAB</h2>
-        <p class="section-desc">Experience how Coach Rasul dissects opponent fighting styles and creates custom counter-strategies.</p>
-      </div>
-
-      <div class="iq-lab-box">
-        <div class="iq-scenario-nav">
-          <button class="iq-tab active" data-scenario="southpaw">
-            <i class="fa-solid fa-shuffle"></i> Vs. Southpaw Opponent
-          </button>
-          <button class="iq-tab" data-scenario="aggressor">
-            <i class="fa-solid fa-bullhorn"></i> Vs. Swarming Aggressor
-          </button>
-          <button class="iq-tab" data-scenario="tall-boxer">
-            <i class="fa-solid fa-arrows-up-to-line"></i> Vs. Tall Outside Jabber
-          </button>
-        </div>
-
-        <div class="iq-display-panel" id="iqPanel">
-          <div class="iq-card">
-            <div class="iq-meta">
-              <span class="iq-badge">SCENARIO ANALYSIS: SOUTHPAW TRAP</span>
-              <span class="iq-difficulty"><i class="fa-solid fa-circle-exclamation"></i> HIGH TACTICAL PRIORITY</span>
-            </div>
-            
-            <h3 class="iq-title">Lead Foot Domination & Overhand Countering</h3>
-            
-            <div class="iq-details-grid">
-              <div class="iq-column">
-                <h4><i class="fa-solid fa-triangle-exclamation"></i> Common Amateur Mistake:</h4>
-                <p>Stepping inside the southpaw's lead foot, exposing your chin directly to their straight left hand while smothering your own jab.</p>
-              </div>
-
-              <div class="iq-column pro-solution">
-                <h4><i class="fa-solid fa-circle-check"></i> Rasul 1-on-1 Adjustment:</h4>
-                <p>Relentless outside lead-foot positioning. Establishing the outside foot angle opens the straight right hand down the pipe and sets up the lead hook around their guard.</p>
-              </div>
-            </div>
-
-            <div class="iq-metrics-row">
-              <div class="metric-item">
-                <span class="m-val">94%</span>
-                <span class="m-lbl">Lead Foot Win Rate</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-val">+3.2x</span>
-                <span class="m-lbl">Right Hand Clean Land Rate</span>
-              </div>
-              <div class="metric-item">
-                <span class="m-val">0.18s</span>
-                <span class="m-lbl">Counter Reaction Speed</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Private Facility Feature -->
-  <section class="section facility-section">
-    <div class="container">
-      <div class="facility-banner" style="background-image: url('assets/facility_ring.png');">
-        <div class="facility-overlay"></div>
-        <div class="facility-content">
-          <div class="sub-badge"><i class="fa-solid fa-location-dot"></i> PRIVATE DOWNTOWN FIGHT LAB</div>
-          <h2 class="facility-title">CHAMPIONSHIP-GRADE EQUIPMENT & PRIVACY</h2>
-          <p class="facility-desc">No crowds. No noise. Custom regulation ring, leather heavy bags, speed platforms, and high-speed motion tracking sensors engineered exclusively for 1-on-1 client assessment.</p>
-          <div class="facility-tags">
-            <span><i class="fa-solid fa-check"></i> Soundproof Private Facility</span>
-            <span><i class="fa-solid fa-check"></i> Biomechanical Tracking</span>
-            <span><i class="fa-solid fa-check"></i> High-Speed Video Analysis</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Fighter Testimonials & Success Stories -->
-  <section class="section testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="section-header text-center">
-        <div class="section-tag">ATHLETE REVIEWS</div>
-        <h2 class="section-title">PROVEN RESULTS FROM THE RING</h2>
-        <p class="section-desc">Hear from athletes who transformed their fight records through Coach Rasul’s private 1-on-1 system.</p>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="t-card">
-          <div class="t-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="t-text">
-            "Before working with Rasul, I was relying purely on toughness and getting hit way too often. In just 6 weeks of 1-on-1 work, my footwork completely changed. I won my last regional bout by 2nd round KO without taking a single flush hit."
-          </p>
-          <div class="t-author">
-            <div class="t-avatar"><i class="fa-solid fa-user-shield"></i></div>
-            <div class="t-info">
-              <strong>Marcus "The Hammer" V.</strong>
-              <span>Amateur Golden Gloves Contender (8-1 Record)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="t-card featured-t">
-          <div class="t-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="t-text">
-            "Coach Rasul's video breakdown alone is worth 10x the investment. He caught a micro-telegraph in my right cross that 3 previous coaches missed. Now my right hand lands like a laser."
-          </p>
-          <div class="t-author">
-            <div class="t-avatar"><i class="fa-solid fa-crown"></i></div>
-            <div class="t-info">
-              <strong>Tariq "King" K.</strong>
-              <span>Active Professional Boxer (5-0, 4 KOs)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="t-card">
-          <div class="t-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="t-text">
-            "The level of detail in Rasul Boxing Club is unbelievable. You aren't just punching bags; you are learning ring generalship and distance control that makes opponents look foolish."
-          </p>
-          <div class="t-author">
-            <div class="t-avatar"><i class="fa-solid fa-medal"></i></div>
-            <div class="t-info">
-              <strong>Elena "Apex" R.</strong>
-              <span>State Champion & National Contender</span>
-            </div>
+            <p class="quote-text" data-key="coachQuote">"Если вы хотите боксировать как все — идите в обычный зал. Если хотите стать неуязвимым и точным — добро пожаловать на мой ринг."</p>
+            <div class="quote-author">— Тренер Расул</div>
           </div>
         </div>
       </div>
@@ -562,34 +262,34 @@
     <div class="container">
       <div class="booking-wrapper">
         <div class="booking-info-col">
-          <div class="section-tag">PRIMARY ASSESSMENT REGISTRATION</div>
-          <h2 class="booking-title">RESERVE YOUR PRIVATE ASSESSMENT</h2>
-          <p class="booking-subtitle">
-            Take the first step toward professional-grade fight mechanics. Your 60-minute private assessment includes full biomechanical evaluation, footwork audit, sparring video review, and a personalized 12-month development blueprint.
+          <div class="section-tag" data-key="bookingTag">ЗАПИСЬ НА АУДИТ</div>
+          <h2 class="booking-title" data-key="bookingTitle">ЗАБРОНИРОВАТЬ ПРИВАТНЫЙ АУДИТ</h2>
+          <p class="booking-subtitle" data-key="bookingSubtitle">
+            Первый шаг к профессиональной технике. 60-минутный персональный аудит включает оценку биомеханики, разбор ошибок и индивидуальный план развития.
           </p>
 
           <div class="assessment-highlights">
             <div class="a-item">
               <div class="a-icon"><i class="fa-solid fa-stopwatch"></i></div>
               <div class="a-text">
-                <strong>60-Minute Intensive 1-on-1</strong>
-                <span>Full physical & technical evaluation inside Coach Rasul's private ring.</span>
+                <strong data-key="ah1Title">60 Минут Интенсивной Работы</strong>
+                <span data-key="ah1Desc">Полная оценка техники на персональном ринге.</span>
               </div>
             </div>
 
             <div class="a-item">
               <div class="a-icon"><i class="fa-solid fa-video"></i></div>
               <div class="a-text">
-                <strong>Slow-Motion Video Biometrics</strong>
-                <span>Identify guard holes and balance breaks in high-frame-rate playback.</span>
+                <strong data-key="ah2Title">Замедленный Видео-Разбор</strong>
+                <span data-key="ah2Desc">Поиск брешей в защите и балансе.</span>
               </div>
             </div>
 
             <div class="a-item">
               <div class="a-icon"><i class="fa-solid fa-scroll"></i></div>
               <div class="a-text">
-                <strong>Custom Fight Blueprint</strong>
-                <span>Receive a detailed tactical plan tailored to your body type and fight style.</span>
+                <strong data-key="ah3Title">Персональный План Бойца</strong>
+                <span data-key="ah3Desc">Пошаговая программа под ваше телосложение и стиль.</span>
               </div>
             </div>
           </div>
@@ -597,7 +297,7 @@
           <div class="urgency-callout">
             <i class="fa-solid fa-circle-exclamation"></i>
             <div>
-              <strong>Strict Application Filter:</strong> Coach Rasul accepts only 4 new assessment candidates per month to maintain elite coaching quality.
+              <strong data-key="urgencyTitle">Ограниченный набор:</strong> <span data-key="urgencyDesc">Тренер Расул берет не более 4 новых спортсменов в месяц.</span>
             </div>
           </div>
         </div>
@@ -605,92 +305,85 @@
         <div class="booking-form-col">
           <div class="form-card">
             <div class="form-card-header">
-              <h3>ASSESSMENT APPLICATION</h3>
-              <span class="form-status"><span class="pulse-dot"></span> LIVE ACCEPTANCE</span>
+              <h3 data-key="formHeader">АНКЕТА КАНДИДАТА</h3>
+              <span class="form-status"><span class="pulse-dot"></span> <span data-key="formStatus">ПРИЕМ ЗАЯВОК</span></span>
             </div>
 
             <form id="assessmentForm" novalidate>
               <!-- Slot Time Selector -->
               <div class="form-group">
-                <label class="form-label">Preferred Session Day / Slot</label>
+                <label class="form-label" data-key="labelSlot">Предпочтительное время</label>
                 <div class="slot-picker" id="slotPicker">
-                  <div class="slot-option active" data-slot="Weekday Morning (8:00 AM)">
-                    <span class="s-day">Weekday Morning</span>
-                    <span class="s-time">8:00 AM - 9:00 AM</span>
+                  <div class="slot-option active" data-slot="Утро (08:00)">
+                    <span class="s-day" data-key="slot1Day">Утреннее время</span>
+                    <span class="s-time">08:00 - 09:00</span>
                   </div>
-                  <div class="slot-option" data-slot="Weekday Evening (6:30 PM)">
-                    <span class="s-day">Weekday Evening</span>
-                    <span class="s-time">6:30 PM - 7:30 PM</span>
+                  <div class="slot-option" data-slot="Вечер (18:30)">
+                    <span class="s-day" data-key="slot2Day">Вечернее время</span>
+                    <span class="s-time">18:30 - 19:30</span>
                   </div>
-                  <div class="slot-option" data-slot="Saturday Pro Camp (10:00 AM)">
-                    <span class="s-day">Saturday Pro Slot</span>
-                    <span class="s-time">10:00 AM - 11:00 AM</span>
+                  <div class="slot-option" data-slot="Суббота (10:00)">
+                    <span class="s-day" data-key="slot3Day">Субботний слот</span>
+                    <span class="s-time">10:00 - 11:00</span>
                   </div>
                 </div>
-                <input type="hidden" name="selectedSlot" id="selectedSlotInput" value="Weekday Morning (8:00 AM)">
+                <input type="hidden" name="selectedSlot" id="selectedSlotInput" value="Утро (08:00)">
               </div>
 
               <!-- Field 1: Full Name -->
               <div class="form-group">
-                <label for="fullName" class="form-label">1. Full Name <span class="required">*</span></label>
+                <label for="fullName" class="form-label"><span data-key="labelName">1. Имя и Фамилия</span> <span class="required">*</span></label>
                 <div class="input-wrapper">
                   <i class="fa-solid fa-user input-icon"></i>
-                  <input type="text" id="fullName" class="form-input" placeholder="e.g. Alexander Vance" required>
+                  <input type="text" id="fullName" class="form-input" placeholder="Например: Александр Ванин" required>
                 </div>
-                <div class="field-error" id="fullNameError">Please enter your full name.</div>
+                <div class="field-error" id="fullNameError" data-key="errName">Пожалуйста, укажите ваше имя.</div>
               </div>
 
               <!-- Field 2: Phone / Email -->
               <div class="form-group">
-                <label for="contactInfo" class="form-label">2. Phone Number or Email <span class="required">*</span></label>
+                <label for="contactInfo" class="form-label"><span data-key="labelContact">2. Телефон или Email</span> <span class="required">*</span></label>
                 <div class="input-wrapper">
                   <i class="fa-solid fa-envelope input-icon"></i>
-                  <input type="text" id="contactInfo" class="form-input" placeholder="e.g. alex@fighter.com or (555) 234-5678" required>
+                  <input type="text" id="contactInfo" class="form-input" placeholder="+7 (999) 000-00-00 или email@mail.ru" required>
                 </div>
-                <div class="field-error" id="contactInfoError">Please enter a valid email address or phone number.</div>
+                <div class="field-error" id="contactInfoError" data-key="errContact">Укажите корректный номер телефона или email.</div>
               </div>
 
               <!-- Field 3: Fight Experience -->
               <div class="form-group">
-                <label for="fightExperience" class="form-label">3. Fight Experience Level <span class="required">*</span></label>
+                <label for="fightExperience" class="form-label"><span data-key="labelExp">3. Опыт в боксе</span> <span class="required">*</span></label>
                 <div class="select-wrapper">
                   <i class="fa-solid fa-award select-icon"></i>
                   <select id="fightExperience" class="form-select" required>
-                    <option value="" disabled selected>Select your current experience...</option>
-                    <option value="Beginner Contender">Beginner Contender (0-1 Year / Seeking Fundamentals)</option>
-                    <option value="Amateur Fighter">Amateur Fighter (1-10 Bouts / Tournament Level)</option>
-                    <option value="Experienced Amateur">Experienced Amateur (10+ Bouts / National Level)</option>
-                    <option value="Active Professional Fighter">Active Professional Fighter (Pro License)</option>
-                    <option value="Pro Prospect / Collegiate Athlete">Pro Prospect / Multi-Sport Elite</option>
+                    <option value="" disabled selected data-key="optExpDefault">Выберите ваш опыт...</option>
+                    <option value="Beginner Contender" data-key="optExp1">Новичок (0-1 год / Постановка базы)</option>
+                    <option value="Amateur Fighter" data-key="optExp2">Любитель (1-10 боев / Соревнования)</option>
+                    <option value="Experienced Amateur" data-key="optExp3">Опытный любитель (10+ боев / Разрядник)</option>
+                    <option value="Active Professional Fighter" data-key="optExp4">Профессиональный боец (Про-лицензия)</option>
                   </select>
                 </div>
-                <div class="field-error" id="experienceError">Please select your experience level.</div>
+                <div class="field-error" id="experienceError" data-key="errExp">Выберите уровень вашего опыта.</div>
               </div>
 
               <!-- Field 4: Primary Objective -->
               <div class="form-group">
-                <label for="primaryObjective" class="form-label">4. Primary Breakthrough Objective <span class="required">*</span></label>
+                <label for="primaryObjective" class="form-label"><span data-key="labelGoal">4. Главная цель тренировок</span> <span class="required">*</span></label>
                 <div class="input-wrapper">
                   <i class="fa-solid fa-bullseye input-icon"></i>
-                  <textarea id="primaryObjective" class="form-textarea" rows="3" placeholder="Describe what you want Coach Rasul to fix or optimize (e.g. counter timing, footwork angles, pro fight debut prep)..." required></textarea>
+                  <textarea id="primaryObjective" class="form-textarea" rows="3" placeholder="Что нужно исправить или поднять на новый уровень (например: защита от контратак, тайминг, подготовка к бою)..." required></textarea>
                 </div>
-                <div class="field-error" id="objectiveError">Please share your main training objective.</div>
-              </div>
-
-              <!-- Optional Field: Weight Class -->
-              <div class="form-group">
-                <label for="weightClass" class="form-label">Weight Division (Optional)</label>
-                <input type="text" id="weightClass" class="form-input" placeholder="e.g. Welterweight (147 lbs) / Middleweight (160 lbs)">
+                <div class="field-error" id="objectiveError" data-key="errGoal">Пожалуйста, опишите вашу цель.</div>
               </div>
 
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary btn-block btn-submit" id="submitFormBtn">
-                <span class="btn-text">Submit Session Request</span>
+                <span class="btn-text" data-key="btnSubmit">Отправить заявку на аудит</span>
                 <i class="fa-solid fa-paper-plane btn-icon"></i>
               </button>
 
-              <div class="form-security-note">
-                <i class="fa-solid fa-shield-halved"></i> 100% Confidential Application. No spam. You will receive direct confirmation from Coach Rasul's office.
+              <div class="form-security-note" data-key="formSecurity">
+                <i class="fa-solid fa-shield-halved"></i> Конфиденциально. Без спама. Прямой ответ от штаба Тренера Расула.
               </div>
             </form>
           </div>
@@ -699,7 +392,7 @@
     </div>
   </section>
 
-  <!-- Booking Confirmation Modal (High Status Confirmation) -->
+  <!-- Booking Confirmation Modal -->
   <div class="modal-backdrop" id="confirmationModal" aria-hidden="true">
     <div class="modal-card">
       <button class="modal-close" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
@@ -708,54 +401,45 @@
         <i class="fa-solid fa-circle-check"></i>
       </div>
 
-      <h2 class="modal-title">ASSESSMENT REQUEST SUBMITTED</h2>
-      <div class="modal-subtitle">Your private application has been locked into the fight laboratory queue.</div>
+      <h2 class="modal-title" data-key="modalTitle">ЗАЯВКА ПРИНЯТА</h2>
+      <div class="modal-subtitle" data-key="modalSubtitle">Ваша анкета внесена в очередь кандидатов на аудит.</div>
 
       <div class="booking-ticket">
         <div class="ticket-header">
-          <span class="ticket-label">APPLICATION REFERENCE CODE</span>
+          <span class="ticket-label" data-key="ticketLabel">КОД РЕГИСТРАЦИИ</span>
           <span class="ticket-code" id="resTicketCode">RBC-2026-9842</span>
         </div>
 
         <div class="ticket-details">
           <div class="t-row">
-            <span class="t-key">Applicant Name:</span>
-            <span class="t-val" id="resName">Alex Vance</span>
+            <span class="t-key" data-key="tKeyName">Кандидат:</span>
+            <span class="t-val" id="resName">Александр Ванин</span>
           </div>
           <div class="t-row">
-            <span class="t-key">Contact info:</span>
-            <span class="t-val" id="resContact">alex@fighter.com</span>
+            <span class="t-key" data-key="tKeyContact">Контакты:</span>
+            <span class="t-val" id="resContact">+7 (999) 000-00-00</span>
           </div>
           <div class="t-row">
-            <span class="t-key">Experience Tier:</span>
-            <span class="t-val" id="resExp">Amateur Fighter</span>
+            <span class="t-key" data-key="tKeyExp">Уровень:</span>
+            <span class="t-val" id="resExp">Любитель</span>
           </div>
           <div class="t-row">
-            <span class="t-key">Preferred Session:</span>
-            <span class="t-val" id="resSlot">Weekday Morning (8:00 AM)</span>
+            <span class="t-key" data-key="tKeySlot">Слот:</span>
+            <span class="t-val" id="resSlot">Утро (08:00)</span>
           </div>
           <div class="t-row">
-            <span class="t-key">Status:</span>
-            <span class="t-val badge-review"><i class="fa-solid fa-clock"></i> PENDING COACH REVIEW</span>
+            <span class="t-key" data-key="tKeyStatus">Статус:</span>
+            <span class="t-val badge-review"><i class="fa-solid fa-clock"></i> <span data-key="statusPending">НА РАССМОТРЕНИИ</span></span>
           </div>
         </div>
       </div>
 
-      <div class="modal-instructions">
-        <h4><i class="fa-solid fa-clipboard-list"></i> What Happens Next:</h4>
-        <ol>
-          <li>Coach Rasul personally reviews your objective within 12–24 hours.</li>
-          <li>Our office sends an SMS/Email to schedule your exact ring timestamp.</li>
-          <li>Bring hand wraps, mouthguard, clean boxing shoes, and focus.</li>
-        </ol>
-      </div>
-
       <div class="modal-actions">
         <button class="btn btn-secondary" id="downloadIcsBtn">
-          <i class="fa-solid fa-calendar-plus"></i> Save Calendar Reminder (.ics)
+          <i class="fa-solid fa-calendar-plus"></i> <span data-key="btnIcs">Сохранить в календарь (.ics)</span>
         </button>
         <button class="btn btn-primary" id="modalDoneBtn">
-          <span>Return To Site</span>
+          <span data-key="btnDone">Вернуться на сайт</span>
         </button>
       </div>
     </div>
@@ -767,49 +451,35 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo-text">RASUL <span>BOXING</span></div>
-          <p class="footer-tagline">"Built for future champions. Private 1-on-1 fight lab."</p>
+          <p class="footer-tagline">"Построено для будущих чемпионов. Приватная лаборатория бокса."</p>
         </div>
 
         <div class="footer-links">
           <div class="f-col">
-            <h4>Navigation</h4>
-            <a href="#hero">Home</a>
-            <a href="#pillars">Training Pillars</a>
-            <a href="#coach">Coach Rasul</a>
-            <a href="#ring-iq">Fight IQ Lab</a>
+            <h4 data-key="fTitleNav">Навигация</h4>
+            <a href="#hero" data-key="navHome">Главная</a>
+            <a href="#pillars" data-key="navPillars">Программа</a>
+            <a href="#coach" data-key="navCoach">О тренере</a>
+            <a href="#booking" data-key="navBooking">Запись</a>
           </div>
 
           <div class="f-col">
-            <h4>Private Access</h4>
-            <a href="#qualifier">Qualifier Quiz</a>
-            <a href="#booking">Book Assessment</a>
-            <a href="#testimonials">Fighter Stories</a>
-          </div>
-
-          <div class="f-col">
-            <h4>Location & Hours</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Downtown Private Fight Lab (By Appointment Only)</p>
-            <p><i class="fa-solid fa-clock"></i> Mon - Sat: 7:00 AM - 9:00 PM</p>
+            <h4 data-key="fTitleContact">Контакты</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Приватный зал (по предварительной записи)</p>
+            <p><i class="fa-solid fa-clock"></i> Пн - Сб: 07:00 - 21:00</p>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div class="copyright">
-          RASUL BOXING © 2026. All rights reserved. High-Performance Private Boxing Coaching.
-        </div>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <span>•</span>
-          <a href="#">Terms of Private Training</a>
-          <span>•</span>
-          <a href="#">Athlete Confidentiality</a>
+          RASUL BOXING © 2026. Все права защищены. Персональная подготовка по боксу.
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Audio Feedback Script / App Logic -->
+  <!-- App Script -->
   <script src="app.js"></script>
 </body>
 </html>
