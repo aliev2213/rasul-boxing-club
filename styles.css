@@ -35,7 +35,7 @@
 
   /* Spacing & Layout */
   --container-width: 1140px;
-  --header-height: 76px;
+  --header-height: 90px;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -53,21 +53,21 @@
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 72px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 0 10px rgba(203, 161, 53, 0.4));
 }
 
 .mobile-logo-img {
-  height: 52px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   margin-bottom: 1.25rem;
 }
 
 .footer-logo-img {
-  height: 56px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   margin-bottom: 0.75rem;
