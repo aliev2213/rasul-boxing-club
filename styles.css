@@ -1384,6 +1384,45 @@ button, input, select, textarea {
   background-clip: text;
 }
 
+/* Generic footer contact links (phone, WhatsApp, Instagram) */
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.footer-contact-link:hover {
+  color: var(--accent-gold) !important;
+}
+
+.footer-contact-link i {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.footer-contact-link:hover i {
+  color: var(--accent-gold);
+}
+
+/* WhatsApp — keep signature green on hover */
+.footer-whatsapp-link:hover {
+  color: #25D366 !important;
+}
+.footer-whatsapp-link:hover i {
+  color: #25D366;
+}
+.footer-whatsapp-link i {
+  color: #25D366;
+  -webkit-text-fill-color: #25D366;
+}
+
 /* Instagram Section Responsive */
 @media (max-width: 768px) {
   .insta-feed-grid {
