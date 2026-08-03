@@ -1234,86 +1234,30 @@ button, input, select, textarea {
   margin-bottom: 2rem;
 }
 
-.insta-card {
+/* Instagram embed wrappers */
+.insta-embed-wrap {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 4 / 5;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-end;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
   border: 1px solid var(--border-dark);
-  text-decoration: none;
-  background-color: var(--bg-card);
+  background: var(--bg-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  /* Instagram embeds render at a fixed width — we make them responsive */
+  min-height: 540px;
 }
 
-.insta-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(203, 161, 53, 0.35);
+.insta-embed-wrap:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(203, 161, 53, 0.3);
 }
 
-.insta-card-video {
-  position: absolute;
-  inset: 0;
+.insta-embed-wrap iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  transition: transform var(--transition-normal);
-}
-
-.insta-card:hover .insta-card-video {
-  transform: scale(1.06);
-}
-
-.insta-card-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(13, 14, 17, 0.72);
-  backdrop-filter: blur(3px);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  font-family: var(--font-subheading);
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  color: #fff;
-  gap: 0.6rem;
-}
-
-.insta-card-overlay i {
-  font-size: 2.75rem;
-  color: var(--accent-gold);
-}
-
-.insta-card:hover .insta-card-overlay {
-  opacity: 1;
-}
-
-.insta-card-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 1.5rem 1.25rem;
-  background: linear-gradient(0deg, rgba(13, 14, 17, 0.95) 0%, rgba(13, 14, 17, 0.4) 60%, transparent 100%);
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
-  font-family: var(--font-subheading);
-  letter-spacing: 0.5px;
-}
-
-.insta-card-content i {
-  font-size: 0.8rem;
-  color: var(--accent-gold);
+  min-height: 540px;
+  border: none;
+  display: block;
+  background: transparent;
 }
 
 .insta-cta-row {
