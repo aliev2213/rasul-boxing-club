@@ -713,6 +713,7 @@ button, input, select, textarea {
   overflow: hidden;
   border: 1px solid var(--border-dark);
   box-shadow: var(--shadow-card);
+  aspect-ratio: 1 / 1;
 }
 
 .coach-img {
@@ -726,7 +727,7 @@ button, input, select, textarea {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(180deg, transparent 0%, rgba(17,17,17,0.95) 80%);
+  background: linear-gradient(180deg, transparent 0%, rgba(13, 14, 17, 0.95) 75%);
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
