@@ -1234,30 +1234,29 @@ button, input, select, textarea {
   margin-bottom: 2rem;
 }
 
-/* Instagram embed wrappers */
+/* Instagram embed wrappers - clipped to show video only */
 .insta-embed-wrap {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-dark);
-  background: var(--bg-card);
+  background: #000;
+  height: 440px;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  /* Instagram embeds render at a fixed width — we make them responsive */
-  min-height: 540px;
 }
 
 .insta-embed-wrap:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(203, 161, 53, 0.3);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(203, 161, 53, 0.35);
 }
 
 .insta-embed-wrap iframe {
   width: 100%;
-  height: 100%;
-  min-height: 540px;
+  height: 540px;
+  margin-top: -54px;
   border: none;
   display: block;
-  background: transparent;
+  background: #000;
 }
 
 .insta-cta-row {
@@ -1382,9 +1381,13 @@ button, input, select, textarea {
     gap: 1rem;
   }
 
-  .insta-embed-wrap,
+  .insta-embed-wrap {
+    height: 420px;
+  }
+
   .insta-embed-wrap iframe {
-    min-height: 480px;
+    height: 520px;
+    margin-top: -52px;
   }
 
   .floating-insta-btn {
