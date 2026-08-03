@@ -713,7 +713,7 @@ button, input, select, textarea {
   overflow: hidden;
   border: 1px solid var(--border-dark);
   box-shadow: var(--shadow-card);
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
 }
 
 .coach-img {
