@@ -1442,3 +1442,75 @@ button, input, select, textarea {
     font-size: 1.35rem;
   }
 }
+
+/* Coach Modal & Action Wrap */
+.coach-action-wrap {
+  margin-top: 2rem;
+}
+
+.btn-coach-more {
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+}
+
+.btn-coach-more:hover {
+  background-color: var(--bg-card-hover);
+  box-shadow: 0 0 20px rgba(203, 161, 53, 0.3);
+}
+
+.coach-modal-card {
+  max-width: 720px;
+  text-align: left;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.coach-modal-header {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.coach-modal-body {
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.coach-bio-block {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+}
+
+.bio-block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.bio-block-header i {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+}
+
+.bio-block-header h3 {
+  font-family: var(--font-subheading);
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.coach-bio-block p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}

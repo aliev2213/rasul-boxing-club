@@ -57,14 +57,24 @@ const translations = {
 
     coachTag:       "О ТРЕНЕРЕ",
     coachTitle:     '"СОВЕТСКАЯ ШКОЛА — ЭТО НЕ СТИЛЬ. ЭТО СИСТЕМА, КОТОРУЮ НЕЛЬЗЯ СКОПИРОВАТЬ ЗА МЕСЯЦ."',
-    coachBio:       "Расул Такаев — тренер советской боксёрской школы. Его метод формирует боксёра, который меньше получает, контролирует дистанцию и побеждает тактикой — а не атлетизмом. Советская система ставит технику, которая работает на всю карьеру и не зависит от возраста или физических данных.",
+    coachBio:       "Расул Такаев — тренер по боксу с базой восточноевропейской школы единоборств. Его подход основан на педагогической прогрессии, балансе, контроле дистанции и высокой плотности работы джебом. В отличие от фитнес-инструкторов, Расул сформировал опыт через интенсивные спарринги, лаповую работу и приватную тактическую подготовку, перенеся этот подход в Торонто.",
     coachBadgeTitle: "ГЛАВНЫЙ ТРЕНЕР",
-    coachBadgeSub:  "Советская боксёрская школа",
+    coachBadgeSub:  "Восточноевропейская школа",
     cp1Title: "Строго 1-на-1",
-    cp1Desc:  "Каждая деталь советской техники ставится индивидуально — высота локтя, угол стойки, работа плечом в гарде.",
-    cp2Title: "Видео-разбор в стиле советских тренеров",
-    cp2Desc:  "Кадр за кадром — как ваша стойка, джеб и контрудар соответствуют эталону школы.",
-    coachQuote: '',
+    cp1Desc:  "Каждая деталь техники ставится индивидуально — высота локтя, угол стойки, работа плечом в гарде.",
+    cp2Title: "Видео-разбор кадр за кадром",
+    cp2Desc:  "Кадр за кадром — как ваша стойка, джеб и контрудар соответствуют техническому эталону.",
+    btnCoachLearnMore: "Узнать подробнее о методологии",
+
+    modalCoachTitle: "БИОГРАФИЯ И МЕТОДОЛОГИЯ ТРЕНЕРА",
+    modalCoachSub:   "Расул Такаев • Восточноевропейская школа и практика в Торонто",
+    modalCoachSec1Title: "Методологическая база и стиль",
+    modalCoachSec1Text:  "Подготовка Расула Такаева опирается на восточноевропейскую школу единоборств. В этой системе развитие атлета строится на строго педагогической прогрессии, структурном балансе, точнейшем контроле дистанции и высокой плотности работы джебом. Стиль характеризуется системными перемещениями (футворок), реактивной работой головой и эффективным переносом кинетической энергии от ног — фундаментом любительских и профессиональных систем Европы и Центральной Азии.",
+    modalCoachSec2Title: "Практический опыт и квалификация",
+    modalCoachSec2Text:  "В отличие от коммерческих фитнес-тренеров с краткосрочными сертификатами, Такаев сформировал технический потенциал через многолетнюю практическую работу в боксе и кондиционной подготовке. Он одинаково свободно работает из правосторонней (ортодокс) и левосторонней (левша) стоек, филигранно контролирует пространственные границы ринга и ставит серийную контрударную работу. В его активе — элитный уровень лаповой техники и спарринговая база, полученная в Восточной Европе до переезда в Канаду.",
+    modalCoachSec3Title: "Тренерская деятельность в Торонто",
+    modalCoachSec3Text:  "Основав практику в районе Большого Торонто (GTA) — на фоне таких известных центров, как United Boxing Club, Toronto Boxing Academy и Budo Canada, — Такаев занял нишу аутентичной восточноевропейской лаповой техники и персональной боевой кондиции. В отличие от групповых фитнес-классов, его работа сосредоточена исключительно на приватных индивидуальных сессиях высокой технической плотности.",
+    btnCloseModal:       "Закрыть",
 
 
     bookingTag:      "ЗАПИСЬ НА АУДИТ",
@@ -174,14 +184,24 @@ const translations = {
 
     coachTag:       "MEET THE COACH",
     coachTitle:     '"SOVIET BOXING IS NOT A STYLE. IT IS A SYSTEM YOU CANNOT FAKE."',
-    coachBio:       "Rasul Takaev coaches the Soviet boxing method — a system that builds fighters who take less damage, control distance, and win through tactics, not athleticism. Soviet technique is built to last a full career, regardless of age or physical attributes.",
+    coachBio:       "Rasul Takaev's background is rooted in Eastern European combat sports methodology, emphasizing pedagogical progression, structural balance, distance management, and high-volume jab utilization. Unlike commercial fitness trainers, Takaev built his expertise through dedicated amateur sparring, specialized pad work, and tactical conditioning before establishing his private coaching practice in Toronto.",
     coachBadgeTitle: "HEAD COACH",
-    coachBadgeSub:  "Soviet Boxing School",
-    cp1Title: "Strict 1-on-1 Soviet Methodology",
-    cp1Desc:  "Every detail of the Soviet system is drilled individually — elbow height, guard angle, shoulder coverage, and jab geometry.",
+    coachBadgeSub:  "Eastern European Boxing School",
+    cp1Title: "Strict 1-on-1 Methodology",
+    cp1Desc:  "Every detail of the system is drilled individually — elbow height, guard angle, shoulder coverage, and jab geometry.",
     cp2Title: "Frame-by-Frame Technical Breakdown",
-    cp2Desc:  "Your guard, jab, and counter timing reviewed against the Soviet school standard — the standard that has produced champions for decades.",
-    coachQuote: '',
+    cp2Desc:  "Your guard, jab, and counter timing reviewed against the rigorous technical standard.",
+    btnCoachLearnMore: "Learn More About Coach",
+
+    modalCoachTitle: "COACH BIOGRAPHY & METHODOLOGY",
+    modalCoachSub:   "Rasul Takaev • Eastern European Training System & Toronto Practice",
+    modalCoachSec1Title: "Combat Methodology & Style",
+    modalCoachSec1Text:  "Rasul Takaev's background in martial arts is rooted in Eastern European combat sports methodology. Athletic development in this system emphasizes pedagogical progression, structural balance, precise distance management, and high-volume jab utilization. This regional style prioritizes systematic footwork patterns, reactive head movement, and kinetic power transfer through the lower body — forming the foundation for elite combat systems across Europe and Central Asia.",
+    modalCoachSec2Title: "Technical Credentials & Background",
+    modalCoachSec2Text:  "Unlike commercial fitness trainers who enter boxing through group certifications, Takaev built his foundational expertise through dedicated practice in boxing and combat conditioning. His skill set includes fluid operating from both orthodox and southpaw stances, managing spatial boundaries inside the ring, and executing advanced counter-punching routines. His credentials center on high-level amateur sparring, specialized pad work skills, and tactical training acquired in Eastern Europe before bringing his methodology to Canada.",
+    modalCoachSec3Title: "Coaching Trajectory & Toronto Practice",
+    modalCoachSec3Text:  "Establishing his coaching practice in the Greater Toronto Area (GTA) — alongside established hubs such as United Boxing Club on Bloor St West, Toronto Boxing Academy, and Budo Canada — Takaev identified strong demand for authentic Eastern European technical pad work and 1-on-1 combat conditioning. He positioned his practice strictly within the private technical instruction market rather than general fitness classes.",
+    btnCloseModal:       "Close",
 
     bookingTag:      "ASSESSMENT REGISTRATION",
     bookingTitle:    "RESERVE YOUR PRIVATE ASSESSMENT",
@@ -324,6 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlotPicker();
   initBookingForm();
   initModal();
+  initCoachModal();
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -495,4 +516,20 @@ function initModal() {
     a.download = `Rasul_Boxing_${d.code}.ics`;
     a.click();
   });
+}
+
+function initCoachModal() {
+  const modal = document.getElementById('coachModal');
+  if (!modal) return;
+
+  const open  = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
+  const close = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
+
+  document.getElementById('coachLearnMoreBtn')?.addEventListener('click', open);
+  document.getElementById('coachModalClose')?.addEventListener('click', close);
+  document.getElementById('coachModalCloseBtn')?.addEventListener('click', close);
+  document.getElementById('coachModalBookBtn')?.addEventListener('click', close);
+
+  modal.addEventListener('click', e => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
 }

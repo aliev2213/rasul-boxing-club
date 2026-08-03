@@ -287,6 +287,11 @@
             </div>
           </div>
 
+          <div class="coach-action-wrap">
+            <button class="btn btn-secondary btn-coach-more" id="coachLearnMoreBtn">
+              <i class="fa-solid fa-graduation-cap"></i> <span data-key="btnCoachLearnMore">Узнать подробнее о методологии</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -477,6 +482,60 @@
         </button>
         <button class="btn btn-primary" id="modalDoneBtn">
           <span data-key="btnDone">Вернуться на сайт</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coach Biography & Methodology Modal -->
+  <div class="modal-backdrop coach-modal-backdrop" id="coachModal">
+    <div class="modal-card coach-modal-card">
+      <button class="modal-close" id="coachModalClose"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="coach-modal-header">
+        <div class="modal-tag" data-key="coachTag">О ТРЕНЕРЕ</div>
+        <h2 class="modal-title" data-key="modalCoachTitle">БИОГРАФИЯ И МЕТОДОЛОГИЯ ТРЕНЕРА</h2>
+        <p class="modal-subtitle" data-key="modalCoachSub">Расул Такаев • Восточноевропейская школа и практика в Торонто</p>
+      </div>
+
+      <div class="coach-modal-body">
+        <div class="coach-bio-block">
+          <div class="bio-block-header">
+            <i class="fa-solid fa-chess"></i>
+            <h3 data-key="modalCoachSec1Title">Методологическая база и стиль</h3>
+          </div>
+          <p data-key="modalCoachSec1Text">
+            Подготовка Расула Такаева опирается на восточноевропейскую школу единоборств. В этой системе развитие атлета строится на строго педагогической прогрессии, структурном балансе, точнейшем контроле дистанции и высокой плотности работы джебом. Стиль характеризуется системными перемещениями (футворок), реактивной работой головой и эффективным переносом кинетической энергии от ног.
+          </p>
+        </div>
+
+        <div class="coach-bio-block">
+          <div class="bio-block-header">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3 data-key="modalCoachSec2Title">Практический опыт и квалификация</h3>
+          </div>
+          <p data-key="modalCoachSec2Text">
+            В отличие от коммерческих фитнес-тренеров с краткосрочными сертификатами, Такаев сформировал технический потенциал через многолетнюю практическую работу в боксе и кондиционной подготовке. Он одинаково свободно работает из правосторонней (ортодокс) и левосторонней (левша) стоек, филигранно контролирует пространственные границы ринга и ставит серийную контрударную работу. В его активе — элитный уровень лаповой техники и спарринговая база, полученная в Восточной Европе.
+          </p>
+        </div>
+
+        <div class="coach-bio-block">
+          <div class="bio-block-header">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3 data-key="modalCoachSec3Title">Тренерская деятельность в Торонто</h3>
+          </div>
+          <p data-key="modalCoachSec3Text">
+            Основав практику в районе Большого Торонто (GTA) — на фоне таких известных центров, как United Boxing Club, Toronto Boxing Academy и Budo Canada, — Такаев занял нишу аутентичной восточноевропейской лаповой техники и персональной боевой кондиции. В отличие от групповых фитнес-классов, его работа сосредоточена исключительно на приватных индивидуальных сессиях высокой технической плотности.
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="#booking" class="btn btn-primary" id="coachModalBookBtn">
+          <i class="fa-solid fa-calendar-check"></i> <span data-key="heroCtaPrimary">Записаться на аудит</span>
+        </a>
+        <button class="btn btn-secondary" id="coachModalCloseBtn">
+          <span data-key="btnCloseModal">Закрыть</span>
         </button>
       </div>
     </div>
